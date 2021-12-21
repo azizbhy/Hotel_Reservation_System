@@ -2,8 +2,8 @@
 module.exports = `CREATE TABLE Reservation(
     ID INT NOT NULL AUTO_INCREMENT,
     CustomerUser varchar(255) NOT NULL,
-    HotelName varchar(255) NOT NULL,
-    HotelBranch varchar(255) NOT NULL,
+    HotelName varchar(100) NOT NULL,
+    HotelBranch varchar(100) NOT NULL,
     RoomNumber INT NOT NULL,
     StartDate date NOT NULL,
     EndDate date NOT NULL,
@@ -17,4 +17,3 @@ module.exports = `CREATE TABLE Reservation(
     CONSTRAINT FK_USER_RES  FOREIGN KEY (CustomerUser) REFERENCES User(Username),
     CONSTRAINT FK_HOTEL_RES FOREIGN KEY (HotelName,HotelBranch) REFERENCES Hotel(Name,Branch)
 );`;
-//(CustomerUser,HotelName,HotelBranch,RoomNumber,StartDate,EndDate,isChecked_in ,isApproved ,isDeleted)

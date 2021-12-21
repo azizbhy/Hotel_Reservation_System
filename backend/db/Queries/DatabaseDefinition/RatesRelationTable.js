@@ -1,9 +1,9 @@
 module.exports = `CREATE TABLE RatesRelation(
     Rating float NOT NULL DEFAULT 0,
     Comment varchar(255) DEFAULT NULL,
-    HotelName varchar(255) NOT NULL,
-    HotelBranch varchar(255) NOT NULL,
-    CustomerUser varchar(255) NOT NULL,
+    HotelName varchar(100) NOT NULL,
+    HotelBranch varchar(100) NOT NULL,
+    CustomerUser varchar(100) NOT NULL,
     isDeleted boolean DEFAULT 0 NOT NULL,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
